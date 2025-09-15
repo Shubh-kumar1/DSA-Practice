@@ -1,4 +1,6 @@
 package Arrays; 
+
+
 /*
  * LeetCode Problem #1: Two Sum (Brute-Force)
  * Link: https://leetcode.com/problems/two-sum/
@@ -28,4 +30,18 @@ public class TwoSum {
         // If no solution is found, throw an exception
         throw new IllegalArgumentException("No two sum solution");
     }
+    public class Main {
+    public static void main(String[] args) {
+        TwoSum solver = new TwoSum();
+        int[] nums = {2, 7, 11, 15};
+        int target = 9;
+
+        try {
+            int[] result = solver.twoSum(nums, target);
+            System.out.println("Indices: " + result[0] + ", " + result[1]);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 }
